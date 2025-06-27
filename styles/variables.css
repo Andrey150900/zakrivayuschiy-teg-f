@@ -2,12 +2,23 @@
 :root{
     --header-size: clamp(20.833rem, 327.692vw - 47.436rem, 80rem);
     --inter: Inter-Variable, sans-serif;
-    --pressStart2P: PressStart2P, sans-serif;
+    --pressStart2P: PressStart2P, fantasy;
     --contour-color: #000;
     --animation-fill-color: red;
-    --background: repeating-linear-gradient(
-     to left, #d3d3d3, transparent 2px),
-     repeating-linear-gradient(to top, #d3d3d3, transparent 2px),
-     linear-gradient( to top, #e7e7e7, #1a1a1a);
-     background-size: cover;
+    --background:
+    repeating-linear-gradient(
+      to right,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #e7e7e7 0%, #e7e7e7 1%, #1a1a1a 100%);
 }
