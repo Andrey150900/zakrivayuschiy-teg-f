@@ -136,7 +136,7 @@
   top: 25px;
   right: 25px;
   mix-blend-mode: hard-light;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+  text-shadow: 0 0 1px #fff;
 }
 
 @supports (
@@ -173,8 +173,12 @@
 }
 
 .card__icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
   max-height: 35px;
+  border: none;
   cursor: pointer;
   background-color: transparent;
   border: 2px solid transparent;
@@ -194,9 +198,9 @@
   outline: transparent;
 }
 
-.like-icon:focus-visible {
+/*.like-icon:focus-visible {
   outline: 2px solid #000;
-}
+}*/
 
 .card__icon-button:focus-visible {
   outline: 2px solid #000;
@@ -216,10 +220,10 @@
 }
 
 /*hover*/
-.like-icon .core {
+/*.like-icon .core {
   fill: transparent;
   transition: fill 0.3s linear;
-}
+}*/
 
 .like-icon:hover .core {
   fill: var(--contour-color);
@@ -294,7 +298,10 @@
 }
 
 .button__save {
-  display: inline-block;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
 }
 
 .svg__diskette {
@@ -321,10 +328,15 @@ dialog::backdrop {
 }
 
 .dialog {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   position: fixed;
   inset: 0;
-  transition: 0.5s ease-in;
+  /*transition: 0.5s ease-in;*/
   width: 353px;
+  padding: 30px;
+  
 }
 
 dialog:not([open]) {
@@ -333,8 +345,9 @@ dialog:not([open]) {
 }
 
 .dialog__text {
+  line-height: 150%;
+  text-transform: uppercase;
   font-family: var(--pressStart2P);
-  width: 234px;
 }
 
 .visually-hidden {
@@ -352,9 +365,9 @@ dialog:not([open]) {
   position: relative;
   cursor: pointer;
   text-transform: uppercase;
-  margin: 14px;
-  width: 293px;
-  height: 38px;
+  /*margin: 14px;*/
+  /*width: 293px;
+  height: 38px;*/
   background-color: transparent;
   text-align: center;
   border: 2px solid #000;
@@ -362,7 +375,7 @@ dialog:not([open]) {
   overflow: hidden;
 }
 
-/*.close__button::after {
+.close__button::after {
   content: "";
   inset: 0;
   position: absolute;
@@ -375,14 +388,21 @@ dialog:not([open]) {
 
 .close__button:hover:after {
   transform: translateX(0);
-}*/
+}
 
 .dialog__container {
-  display: flex;
+  display: grid;
+  align-items: center;
+  grid-template-columns: min-content 1fr;
   gap: 20px;
-  margin: 14px;
-  margin-right: 0;
 }
+
+  .close__button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 38px;
+  }
 
 @media (width <= 375px) {
   .header {
@@ -413,16 +433,30 @@ dialog:not([open]) {
     block-size: 84px;
   }
   .button__save {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
   }
 
   .svg__diskette {
     width: 28px;
     height: 28px;
+    /*flex-shrink: 0;*/
+  }
+
+  .dialog{
+    padding: 30px 40px;
+  }
+
+  /*.dialog__container {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  gap: 20px;
+}*/
+  .dialog__text{
+    font-size: 14px;
+    width: 198px;
+  }
+  .close__button{
+    width: 100%;
   }
 }
 

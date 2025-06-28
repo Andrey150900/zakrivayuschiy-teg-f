@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" href="images/favicon (1).svg" type="image/svg+xml">
+<link rel="icon" href="images/favicon-f.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -252,7 +252,6 @@
                 <p class="subtitle__item">Сейчас вы уже очень много знаете о вёрстке. Но это только начало. Во-первых, впереди ещё много материала про «красотищу». Во-вторых, с окончанием курса учёба не заканчивается. Вёрстка — это целый мир. И этот мир постоянно меняется. Познать его полностью не получится, но это тот случай, когда важен сам процесс познания. Ведь часто путь — и есть результат.</p>
             <p class="subtitle__item">Место, чтобы остановиться, подумать и написать, что вы чувствуете в этой точке пути.</p>
               </div>
-
           <div class="icon__container">
             <button class="card__icon-button" type="button">
               <svg width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg" class="like-icon" aria-hidden="true">
@@ -268,7 +267,6 @@
             </button>
             <button class="card__like-button button" type="button" tabindex="0"><span class="button__text">Like</span></button>
           </div>
-            
             </div>
           </li>
         </ul>
@@ -276,25 +274,25 @@
       <div class="button__container">
       <button class="button__save button" tabindex="0" 
       onclick="window['dialog-id'].showModal()" 
-      aria-controls="dialog-id" type="submit">
+      aria-controls="dialog-id" type="button">
       <svg viewBox="0 0 40 40" class="svg__diskette">
           <use href="./floppy.svg#diskette"/>
         </svg>
       <span class="button__text">Сохранить на память</span>
       </button>
       </div>
-      <dialog id="dialog-id">
+      <dialog id="dialog-id" class="dialog">
         <div class="dialog__container">
-          <svg viewBox="0 0 40 40" class="dialog__diskette">
-            <use href="./floppy.svg#diskette"/>
-          </svg>
-        <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
+            <svg viewBox="0 0 40 40" class="dialog__diskette">
+              <use href="./floppy.svg#diskette"/>
+            </svg>
+            <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
         </div>
-        <form method="dialog">
-          <button class="close__button button" type="submit">
-            <span class="button__text">ок</span>
-          </button>
-        </form>
+          <form method="dialog">
+            <button class="close__button button" type="submit">
+              <span class="button__text">ок</span>
+            </button>
+          </form>
     </dialog>
     </main>
     <script src="./scripts/like.js"></script>
